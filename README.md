@@ -91,6 +91,7 @@ For each object's transformation, I use 'model' vector to store their model matr
 * Rotate (h j)
 
 H - rotate counter-clockwise (from object's perspective)
+
 J - rotate clockwise (from object's perspective)
 
 ![hj](OneDrive/桌面/Assignment3/Assignment_3/gif/hj.gif)
@@ -98,6 +99,7 @@ J - rotate clockwise (from object's perspective)
 * Rescale (k l)
 
 K - scale down
+
 L - scale up
 
 ![kl](OneDrive/桌面/Assignment3/Assignment_3/gif/kl.gif)
@@ -110,13 +112,15 @@ Similarly to model matrix, I use 'renderMode' vector to store and change each ob
 
 ## Camera Control
 
+* Camera move (up down right left)
+
 * Orthographic camera (z)
+
+![orthoCam](OneDrive/桌面/Assignment3/Assignment_3/gif/orthoCam.gif)
 
 * Perspective camera (x)
 
-* Camera move (up down right left)
-
-
+![perspectiveCam](OneDrive/桌面/Assignment3/Assignment_3/gif/perspectiveCam.gif)
 
 
 # Compilation Instructions
