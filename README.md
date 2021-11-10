@@ -46,6 +46,8 @@ Delete bumpy
 
 * Light source
 
+I use specialized shaders light_vertex_shader and light_fragment_shader, bind them with lightVBO and draw the point light at the beginning of the render loop. The light position is stored at global variable 'lightPosition'.
+
 ## Object Control
 
 * Selection (mouseclick)
