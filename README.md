@@ -12,13 +12,15 @@
 
 * Insertion (1 2 3)
 
+
+
 * Delete (backspace)
 
 * Light source
 
 ## Object Control
 
-* Selection (mouse-click)
+* Selection (mouseclick)
 
 * Translate (w a s d)
 
