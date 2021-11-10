@@ -90,13 +90,23 @@ For each object's transformation, I use 'model' vector to store their model matr
 
 * Rotate (h j)
 
+H - rotate counter-clockwise (from object's perspective)
+J - rotate clockwise (from object's perspective)
+
 ![hj](OneDrive/桌面/Assignment3/Assignment_3/gif/hj.gif)
 
 * Rescale (k l)
 
+K - scale down
+L - scale up
+
 ![kl](OneDrive/桌面/Assignment3/Assignment_3/gif/kl.gif)
 
 * Change render mode (i o p)
+
+Similarly to model matrix, I use 'renderMode' vector to store and change each object's render mode. The default mode is wireframe mode. And each selected object's mode can be changed when user pressed 'i', 'o', 'p' keys for wireframe, flat shading and phong shading.
+
+![iop](OneDrive/桌面/Assignment3/Assignment_3/gif/iop.gif)
 
 ## Camera Control
 
