@@ -46,11 +46,43 @@ Delete bumpy
 
 * Light source
 
-I use specialized shaders light_vertex_shader and light_fragment_shader, bind them with lightVBO and draw the point light at the beginning of the render loop. The light position is stored at global variable 'lightPosition'.
+I use specialized shaders light_vertex_shader and light_fragment_shader, bind them with lightVBO and draw the point light at the beginning of the render loop. The light position is stored at global variable 'lightPosition'. Here I set the position at (-0.6, 0.5, 0.4) as shown in the pictures.
 
 ## Object Control
 
 * Selection (mouseclick)
+
+The object selection is implemented by using glReadPixels and stencil buffer. When mouseclick event is active, we use glReadPixel to read in the stencil index for the current pixel and store it in global variable 'index'.
+```bash
+void mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
+{
+    if (action != GLFW_PRESS)
+        return;
+
+    // Get the position of the mouse in the window
+    double x, y;
+    glfwGetCursorPos(window, &x, &y);
+
+    // Get the size of the window
+    int width, height;
+    glfwGetWindowSize(window, &width, &height);
+    
+    // Read pixel
+    glReadPixels(x, height - y - 1, 1, 1, GL_RGBA, GL_UNSIGNED_BYTE, color);
+    glReadPixels(x, height - y - 1, 1, 1, GL_DEPTH_COMPONENT, GL_FLOAT, &depth);
+    glReadPixels(x, height - y - 1, 1, 1, GL_STENCIL_INDEX, GL_UNSIGNED_INT, &index);
+
+    printf("Clicked on pixel %f, %f, color %02hhx%02hhx%02hhx%02hhx, depth %f, stencil index %u\n",
+    x, y, color[0], color[1], color[2], color[3], depth, index);
+}
+```
+We use 'index' to operate selected object in the render loop. First, enable stencil test before drawing each object. Then I use a for loop to draw all object in VAO vector. For each drawing, increase the stencil index. We use this stencil index to compare with the selected 'index'. If the object is selected, we set the object color to red. Else, the object color is green.
+
+e.g. bunny is selected
+
+![6](OneDrive/桌面/Assignment3/Assignment_3/gif/6.png)
+
+For each object's transformation, I use 'model' vector to store their model matrix. They are initialized and push backed when the object is imported. And if the object is selected, change corresponding model matrix in 'model' vector. When rendering, just bind corresponding model matrix to the shader for each object.
 
 * Translate (w a s d)
 
