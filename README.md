@@ -82,13 +82,19 @@ e.g. bunny is selected
 
 ![6](OneDrive/桌面/Assignment3/Assignment_3/gif/6.png)
 
-For each object's transformation, I use 'model' vector to store their model matrix. They are initialized and push backed when the object is imported. And if the object is selected, change corresponding model matrix in 'model' vector. When rendering, just bind corresponding model matrix to the shader for each object.
+For each object's transformation, I use 'model' vector to store their model matrix. They are initialized and push backed when the object is imported. And if the object is selected, change corresponding model matrix in 'model' vector (in key_callback function). When rendering, just bind corresponding model matrix to the shader for each object.
 
 * Translate (w a s d)
 
+![wasd](OneDrive/桌面/Assignment3/Assignment_3/gif/wasd.gif)
+
 * Rotate (h j)
 
+![hj](OneDrive/桌面/Assignment3/Assignment_3/gif/hj.gif)
+
 * Rescale (k l)
+
+![kl](OneDrive/桌面/Assignment3/Assignment_3/gif/kl.gif)
 
 * Change render mode (i o p)
 
