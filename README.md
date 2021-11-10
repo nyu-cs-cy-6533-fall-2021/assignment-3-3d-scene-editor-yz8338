@@ -32,6 +32,18 @@ Insert cube
 
 * Delete (backspace)
 
+In order to delete an object, the user need to first select it and then press backspace. The selection will be described in the Object Control section. When an object is selected, it will update the 'index' global variable. Then we use it to delete corresponding vector in all the VBO and VAO. The selected object can be deleted.
+
+e.g.
+
+![4](OneDrive/桌面/Assignment3/Assignment_3/gif/4.png)
+
+Select bumpy
+
+![5](OneDrive/桌面/Assignment3/Assignment_3/gif/5.png)
+
+Delete bumpy
+
 * Light source
 
 ## Object Control
