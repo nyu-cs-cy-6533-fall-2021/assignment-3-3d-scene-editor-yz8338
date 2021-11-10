@@ -18,7 +18,7 @@
 
 (3) bunny.off: similar to (2).
 
-![1](OneDrive/桌面/CG_Assignment2/Assignment_3/gif/1.png)
+![1](OneDrive/桌面/Assignment3/Assignment_3/gif/1.png)
 
 
 
