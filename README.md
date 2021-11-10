@@ -19,11 +19,11 @@
 (3) bunny.off: similar to (2).
 
 ![1](OneDrive/桌面/Assignment3/Assignment_3/gif/1.png)
-
-
-
-
-
+Insert bunny
+![2](OneDrive/桌面/Assignment3/Assignment_3/gif/2.png)
+Insert bumpy
+![3](OneDrive/桌面/Assignment3/Assignment_3/gif/3.png)
+Insert cube
 
 * Delete (backspace)
 
