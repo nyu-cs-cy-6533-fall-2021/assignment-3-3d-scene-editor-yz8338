@@ -151,6 +151,26 @@ For each object's transformation, I use 'model' vector to store their model matr
 
 * Translate (w a s d)
 
+```bash
+// Translation: w-a-s-d
+case GLFW_KEY_W:
+    if (action == GLFW_PRESS)
+        model[index] = glm::translate(model[index], glm::vec3(0, 0.1, 0));
+    break;
+case GLFW_KEY_A:
+    if (action == GLFW_PRESS)
+        model[index] = glm::translate(model[index], glm::vec3(-0.1, 0, 0));
+    break;
+case GLFW_KEY_S:
+    if (action == GLFW_PRESS)
+        model[index] = glm::translate(model[index], glm::vec3(0, -0.1, 0));
+    break;
+case GLFW_KEY_D:
+    if (action == GLFW_PRESS)
+        model[index] = glm::translate(model[index], glm::vec3(0.1, 0, 0));
+    break;
+```
+
 ![wasd](OneDrive/桌面/Assignment3/Assignment_3/gif/wasd.gif)
 
 * Rotate (h j)
@@ -159,6 +179,18 @@ H - rotate counter-clockwise (from object's perspective)
 
 J - rotate clockwise (from object's perspective)
 
+```bash
+// Rotation: h & j (around y-axis left and right)
+case GLFW_KEY_H:
+    if (action == GLFW_PRESS)
+        model[index] = glm::rotate(model[index], glm::radians(20.0f), glm::vec3(0.0, 1.0, 0.0));
+    break;
+case GLFW_KEY_J:
+    if (action == GLFW_PRESS)
+        model[index] = glm::rotate(model[index], glm::radians(20.0f), glm::vec3(0.0, -1.0, 0.0));
+    break;
+```
+
 ![hj](OneDrive/桌面/Assignment3/Assignment_3/gif/hj.gif)
 
 * Rescale (k l)
@@ -166,6 +198,18 @@ J - rotate clockwise (from object's perspective)
 K - scale down
 
 L - scale up
+
+```bash
+// Rescale: k & l (- & +)
+case GLFW_KEY_K:
+    if (action == GLFW_PRESS)
+        model[index] = glm::scale(model[index], glm::vec3(0.5));
+    break;
+case GLFW_KEY_L:
+    if (action == GLFW_PRESS)
+        model[index] = glm::scale(model[index], glm::vec3(1.5));
+    break;
+```
 
 ![kl](OneDrive/桌面/Assignment3/Assignment_3/gif/kl.gif)
 
